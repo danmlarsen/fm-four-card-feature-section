@@ -29,8 +29,7 @@ body {
     min-height: 100vh;
     background-color: var(--color-light-gray);
     color: var(--color-grayish-blue);
-    padding: 5rem 0;
-
+    padding: 4rem 0;
     display: flex;
     justify-content: center;
 }
@@ -39,15 +38,20 @@ h1,
 h2,
 h3 {
     color: var(--color-darkblue);
+    font-weight: 600;
 }
 
 h2 {
     font-size: 1.6em;
 }
 
+h3 {
+    font-size: 1.4em;
+}
+
 .feature-section {
     max-width: 48rem;
-    padding: 2rem;
+    padding: 3rem;
     text-align: center;
 
     display: flex;
@@ -55,12 +59,12 @@ h2 {
     align-items: center;
 }
 
-.feature-section h2:first-child {
+.feature-section__title {
     font-weight: 200;
 }
 
 .feature-section__title-bold {
-    margin-bottom: 2rem;
+    margin-bottom: 1.8rem;
 }
 
 .feature-section__title-container {
@@ -70,9 +74,8 @@ h2 {
 
 .feature-section__cards {
     list-style: none;
-
     display: grid;
-    row-gap: 2rem;
+    gap: 3rem;
 }
 
 .card {
@@ -80,8 +83,7 @@ h2 {
     text-align: left;
     padding: 2.4rem;
     border-radius: 5px;
-    box-shadow: 0 24px 32px rgba(0, 0, 0, 0.1);
-
+    box-shadow: 0 24px 32px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -104,27 +106,25 @@ h2 {
 
 .card__icon-container {
     flex: 1 0 auto;
-
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
 }
 
-@media screen and (min-width: 60rem) {
+@media screen and (min-width: 768px) {
+    h2 {
+        font-size: 2.6em;
+    }
+
     .feature-section {
-        max-width: 110rem;
+        max-width: 120rem;
     }
 
     .feature-section__cards {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr 1fr;
-        column-gap: 2rem;
         align-items: center;
         justify-content: center;
-    }
-
-    .card {
-        min-width: 30rem;
     }
 
     .card--cyan,
